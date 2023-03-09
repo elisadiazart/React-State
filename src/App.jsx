@@ -1,5 +1,18 @@
+import { useState } from "react";
+
 const App = () => {
-	return <h1>Núcleo de la aplicación</h1>;
+	const [name, setName] = useState('Dani')
+
+	return (
+		<>
+		<h1>{name}</h1>
+		<button onClick={()=>handleClick('Karim', setName)}>Click me</button>
+		</>
+	)
 };
+
+const handleClick = (newName, setName) => {
+	setName(newName)
+}
 
 export default App;
